@@ -54,4 +54,13 @@
 .header__optionLineTwo{
     font-size: 13px;
     font-weight: bold;
+    color: aliceblue;
+}
+.header__optionBasket{
+    display: flex;
+    margin-top: 5px;
+}
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
 }

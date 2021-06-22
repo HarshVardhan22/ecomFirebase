@@ -34,9 +34,9 @@ function Header() {
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
-        <div className="header__option">
+        <div className="header__optionBasket">
           <ShoppingCartIcon className="shoppingCart__icon" />
-          <span className="header__optionLineTwo">Cart</span>
+          <span className="header__optionLineTwo header__basketCount">0</span>
         </div>
       </div>
     </div>
