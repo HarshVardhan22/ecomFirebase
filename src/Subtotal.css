@@ -1,0 +1,24 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+}
+
+.subtotal>*{
+    margin-top: 7px;
+}
+
+.subtotal__gift{
+    display: flex;
+    align-items: center;
+
+}
+
+.subtotal__btn{
+    border-radius: 2px;
+    border: 1px solid gray;
+    padding: 2px;
+}
+
