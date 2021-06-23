@@ -2,7 +2,8 @@ import React from "react";
 import "./Product.css";
 import product from "./assets/product.png";
 import GradeIcon from "@material-ui/icons/Grade";
-const Product = (title,price,rating,image)=> {
+function Product({title="title",price="100",rating='4',image=`${product}`}){
+
   return (
     <div className="product">
       <div className="product__info">
@@ -11,9 +12,14 @@ const Product = (title,price,rating,image)=> {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
-          <GradeIcon></GradeIcon>
-        </div>
+        {
+          //Creating and array of 'rating' length and then  iterating to create number of stars
+          Array.from(Array(parseInt(rating))).map((id,index)=>{
+            return(              
+              <GradeIcon key={index}/>            
+            )
+          })
+        }
       </div>
 
       <img src={image} alt="" className="product__image" />

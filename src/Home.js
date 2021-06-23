@@ -9,7 +9,7 @@ function Home() {
         <img src={cover} alt="" className="home__image" />
       </div>
       <div className="home__row">
-        <Product></Product>
+        <Product title="new" rating="6"></Product>
         <Product></Product>
       </div>
       <div className="home__row">
