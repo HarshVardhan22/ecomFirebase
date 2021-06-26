@@ -6,6 +6,7 @@
 }
 .checkout__left{
     min-width: 60vw;
+    max-width: 60vw;
 }
 .checkout__title{
     margin-right: 20px;

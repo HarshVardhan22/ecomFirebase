@@ -1,7 +1,16 @@
 .checkoutProduct{
     display: flex;
+    max-width:60vw;
     margin-top:20px;
-    margin-bottom:20px
+    margin-bottom:20px;
+    align-items: center;
+}
+.checkoutProductDetails{
+    margin-left: 20px;
+}
+.checkoutProduct__image{
+    width:20vw;
+    object-fit: contain;
 }
 
 .checkoutProduct_info{
