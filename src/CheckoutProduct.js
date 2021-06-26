@@ -2,18 +2,14 @@ import React from "react";
 import "./CheckoutProduct.css";
 import GradeIcon from "@material-ui/icons/Grade";
 import { useStateValue } from "./StateProvider";
-function CheckoutProduct({ title, price, rating, image }) {
+function CheckoutProduct({ title, price, rating, image,id }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
-    // dispatch({
-    //   type: "ADD_TO_BASKET",
-    //   item: {
-    //     title: title,
-    //     image: image,
-    //     price: price,
-    //     rating: rating,
-    //   },
-    // });
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id:id,
+    });
+
   };
 
   return (
