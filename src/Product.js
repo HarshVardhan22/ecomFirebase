@@ -3,7 +3,7 @@ import {useStateValue} from './StateProvider';
 import "./Product.css";
 import product from "./assets/product.png";
 import GradeIcon from "@material-ui/icons/Grade";
-function Product({title="title",price="100",rating='4',image=`${product}`}){
+function Product({title="title",price=100,rating='4',image=`${product}`}){
   const [{basket},dispatch] = useStateValue();
 
   const addToBasket=()=>{
@@ -22,7 +22,7 @@ function Product({title="title",price="100",rating='4',image=`${product}`}){
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
-          <small>$</small>
+          <small>₹</small>
           <strong>{price}</strong>
         </p>
         {

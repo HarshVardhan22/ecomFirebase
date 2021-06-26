@@ -1,0 +1,16 @@
+.checkoutProduct{
+    display: flex;
+    margin-top:20px;
+    margin-bottom:20px
+}
+
+.checkoutProduct_info{
+    padding-left: 20px;
+}
+
+.checkoutProduct__info> button {
+    border: 1px solid black;
+    margin: 10px;
+    padding:
+     5px;
+}
