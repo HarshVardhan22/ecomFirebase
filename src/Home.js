@@ -6,57 +6,46 @@ import Product from "./Product";
 import { useStateValue } from "./StateProvider";
 
 function Home() {
-  // const [products, setProducts] = useState();
-  // useEffect(() => {
-  //   const prevProducts=[];
-  //   db.collection("Product").onSnapshot((snapshot) => {
-  //     let changes = snapshot.docChanges();
-  //     changes.forEach((change) => {
-  //       if (change.type === "added") {
-  //         prevProducts.push({
-  //           ProductID: change.doc.id,
-  //           ProductName: change.doc.data().productName,
-  //           ProductPrice: change.doc.data().productPrice,
-  //           ProductImage: change.doc.data().productImage,
-  //         });
-  //       }
-  //       setProducts(prevProducts);
-  //     });
 
-  //   });
-  // }, []);
-  // console.log(products);
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const tempArray = [];
     const response = db.collection("Product");
     const data = await response.get();
-    // console.log(data.docs[1].data());
     data.docs.map((item) => {
+      console.log(item.data().productImage)
       setProducts((prevState) => {
-        return [...prevState,items.data()]
+        return [...prevState,item.data()]
       })
-      // setProducts([...products,item.data()])
-      console.log(item.data());
-      console.log(products)
-      // console.log(tempArray);
     });
   };
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  },[]);
+
+
+
+
 
   return (
-    <div className="home">
+    <div className="home container-fluid">
       <div className="home__container">
         <img src={cover} alt="" className="home__image" />
       </div>
-
-      {products.map((id) => {
-        return <Product />;
+      <div className="row">
+       
+        {products.map((id) => {
+        return (
+          <div className="col-lg-4 col-l-4 col-md-6 col-s-6 col-xs-12">
+          <Product title={id.productName} price={id.productPrice} 
+        rating= {Math.floor(Math.random() * 2)+3} image={id.productImage}/>
+          </div>
+         );
       })}
+        
+      </div>
+      
     </div>
   );
 }
