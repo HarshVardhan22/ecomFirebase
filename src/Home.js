@@ -34,10 +34,10 @@ function Home() {
     const data = await response.get();
     // console.log(data.docs[1].data());
     data.docs.map((item) => {
-      // setProducts((key) => {
-      //   return [...key,items.data()]
-      // })
-      setProducts([...products,item.data()])
+      setProducts((prevState) => {
+        return [...prevState,items.data()]
+      })
+      // setProducts([...products,item.data()])
       console.log(item.data());
       console.log(products)
       // console.log(tempArray);
