@@ -1,4 +1,4 @@
-.header{
+/* .header{
     height: 60px;
     display: flex;
     align-items: center;
@@ -7,11 +7,25 @@
     top:0;
     z-index:100;
     justify-content: space-evenly;
-}
-.header__logo{
-    width: 80px;
+} */
+
+
+.brandLogo{
+    width: 50px;
     object-fit: contain;
-    margin-top:5px;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+
+.brandText{
+    font-size: 24px;
+    margin-left: 10px;
+    position: relative;
+    top: 5px;
+    
 }
 
 .search__icon{
@@ -19,7 +33,7 @@
     margin-left:5px;
 }
 
-.header__search{
+/* .header__search{
     display: flex;
     align-items: center;
     flex: 1;
@@ -30,7 +44,7 @@
     width: 100%;
     padding: 5px;
     border: none;    
-}
+} */
 
 .header__option{
     display: flex;
@@ -40,28 +54,29 @@
     color: aliceblue;
 }
 .shoppingCart__icon{
-    color: aliceblue;
+    color: hsl(208, 100%, 97%);
     margin-left:5px;
+    position: relative;
+    bottom: 3px;
 }
 
-.header__nav{
-    display: flex;
-    justify-content: space-evenly;
-}
-.header__optionLineOne{
-    font-size: 10px;
-}
+
 .header__optionLineTwo{
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
     color: aliceblue;
+   margin: 10px;
 }
-.header__optionBasket{
+/* .header__optionBasket{
     display: flex;
+    align-items: center;
     margin-top: 5px;
-}
+} */
 .header__basketCount{
     margin-left: 10px;
-    margin-right: 10px;
-    text-decoration: none;
+    text-underline-offset: none;
+  
+    /* margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: px; */
 }
