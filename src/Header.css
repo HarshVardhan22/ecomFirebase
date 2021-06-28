@@ -1,13 +1,9 @@
-/* .header{
+.header{
     height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #131921;
     position: sticky;
     top:0;
-    z-index:100;
-    justify-content: space-evenly;
-} */
+    z-index:100;  
+}
 
 
 .brandLogo{
@@ -64,8 +60,8 @@ a:link {
 .header__optionLineTwo{
     font-size: 18px;
     font-weight: 400;
-    color: aliceblue;
-   margin: 10px;
+    color: aliceblue !important;
+  
 }
 /* .header__optionBasket{
     display: flex;
