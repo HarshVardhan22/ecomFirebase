@@ -4,8 +4,11 @@ import "./Product.css";
 import product from "./assets/product.png";
 import GradeIcon from "@material-ui/icons/Grade";
 function Product({title="title",price=100,rating='4',image=`${product}`}){
+
   const [{basket},dispatch] = useStateValue();
+
   const [id, setId] = useState(1);
+  
   const addToBasket=()=>{
     dispatch({
       type: "ADD_TO_BASKET",
