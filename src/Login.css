@@ -1,7 +1,9 @@
-.login {
+/* .login {
   display: flex;
   flex-direction: column;
-}
+  align-items: center;
+  flex: 1;
+} */
 .login__logo {
   margin-top: 20px;
   max-height: 150px;
@@ -10,18 +12,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-.login__container {
-  display: flex;
-  width: 300px;
-  height: fit-content;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 20px;
+.login__heading{
+  margin-left: 40%;
 }
+
+
+/* 
 .login__container > form > h1 {
   font-weight: 500;
   margin-bottom: 20px;
@@ -38,10 +34,10 @@
   margin-bottom: 10px;
   width: 98%;
   border-radius: 5px;
-}
+} */
 
 .login__signInButton{
-    width: 300px;
+    width: 100%;
     background-color: orangered;
     color: whitesmoke;
     font-size: medium;
@@ -52,7 +48,7 @@
     margin-top: 10px;
 }
 .login__registerButton{
-    width: 300px;
+    width: 100%;
     background-color: darkslategrey;
     border-radius: 5px;
     color: whitesmoke;

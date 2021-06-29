@@ -4,35 +4,35 @@ import { auth } from "./firebase";
 import "./Login.css";
 function Login() {
   const history = useHistory();
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const signIn=(e)=>{
+  const signIn = (e) => {
     e.preventDefault();
-    auth.signInWithEmailAndPassword(email,password)
-    .then((auth)=>{
-      if(auth){
-        history.push('/');
-      }
-    })
-    .catch(err=>alert(err.message))
+    auth.signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        if (auth) {
+          history.push('/');
+        }
+      })
+      .catch(err => alert(err.message))
 
   }
 
-  const register=(e)=>{
+  const register = (e) => {
     e.preventDefault();
-    auth.createUserWithEmailAndPassword(email,password)
-    .then((auth)=>{
-      console.log(auth);
-      if(auth){
-        history.push('/');
-      }
-    })
-    .catch(err=>alert(err.message))
+    auth.createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          history.push('/');
+        }
+      })
+      .catch(err => alert(err.message))
   }
 
   return (
-    <div className="login">
+    <div>
       <Link to="/">
         <div className="login__logo">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
@@ -44,22 +44,29 @@ function Login() {
           </svg>
         </div>
       </Link>
+     
+      <div className="row">
+        <div className="col-8 offset-2 col-md-4 offset-md-4 text-center" ><h2>Sign In</h2></div>
+      </div>
+      <div className="container login">
+        <div className="row ">
+          <div className="col-8 offset-2 col-md-4 offset-md-4">
+            <form>
+              <h5>E-Mail</h5>
+              <input type="email" value={email} className="form-control" onChange={e => setEmail(e.target.value)} />
 
-      <div className="login__container">
-        <form>
-          <h1>Sign In</h1>
-          <h5>E-Mail</h5>
-          <input type="email" value={email} onChange={e=>setEmail(e.target.value)}/>
+              <h5>Password</h5>
+              <input type="password" value={password} className="form-control" onChange={e => setPassword(e.target.value)} />
 
-          <h5>Password</h5>
-          <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
+              <button className="login__signInButton" onClick={signIn}>Sign In</button>
+            </form>
 
-          <button className="login__signInButton" onClick={signIn}>Sign In</button>
-        </form>
+            <p>BY signing-in you agree to our terms and conditions.</p>
 
-        <p>BY signing-in you agree to our terms and conditions.</p>
+            <button className="login__registerButton" onClick={register}>Create new account</button>
+          </div>
+        </div>
 
-        <button className="login__registerButton" onClick={register}>Create new account</button>
       </div>
     </div>
   );

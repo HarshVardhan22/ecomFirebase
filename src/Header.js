@@ -18,6 +18,7 @@ function Header() {
   return (
 
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-dark header" style={{zIndex:"100",top:"0"}} >
+      
       <Link to="/">
         <div>
           <img src={brand} className="brandLogo" alt="BrandLogo" />
