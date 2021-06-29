@@ -1,0 +1,22 @@
+.addProduct__btn{
+  width: 100%;
+  background-color: orangered;
+  color: whitesmoke;
+  font-size: medium;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 10px;
+  
+}
+.addProduct{
+    margin-top: 12%;
+}
+
+@media screen and (max-width: 600px) {
+    .addProduct{
+       position: absolute;
+       top: 10%;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { propTypes } from "react-currency-format";
 import { storage , db} from "./firebase";
-
+import "./AddProduct.css"
 const AddProduct = () => {
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState(0);
@@ -63,13 +63,14 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container-fluid" style={{marginTop:"12%"}}>
-      <div className="row">
-        <div className="col-6 offset-3">
-          <form autoComplete="on" className="form" onSubmit={addProduct}>
-          <div className="row">
-          <h2  className="col-md-5 offset-md-3">Add Product </h2>
+    <div className="container-fluid addProduct">
+    <div className="row">
+          <h2  className="col col-md-5 offset-md-3 text-center">Add Product </h2>
           </div>
+      <div className="row">
+        <div className="col-6 offset-3 col-md-4 offset-md-4">
+          <form autoComplete="on" className="form" onSubmit={addProduct}>
+          
          
             <div className="form-group">
               <label>Add Name</label>
@@ -105,8 +106,8 @@ const AddProduct = () => {
                 required
               />
             </div>
-
-            <button className="addProduct__btn">Add Product</button>
+            <button className="addProduct__btn col-md-5 offset-md-3 ">Add Product</button>
+            
           </form>
           <p className="alert-danger">{error}</p>
         </div>
