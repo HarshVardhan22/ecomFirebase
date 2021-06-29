@@ -17,7 +17,7 @@ function Header() {
 
   return (
 
-    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-dark header" style={{zIndex:"100",top:"0"}} >
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style={{zIndex:"100",top:"0"}} >
       
       <Link to="/">
         <div>
