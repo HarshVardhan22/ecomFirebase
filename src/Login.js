@@ -7,6 +7,8 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [error, setError] = useState('');
+
   const signIn = (e) => {
     e.preventDefault();
     auth.signInWithEmailAndPassword(email, password)
@@ -16,11 +18,13 @@ function Login() {
         }
       })
       .catch(err => alert(err.message))
-
   }
 
   const register = (e) => {
     e.preventDefault();
+    if(email===''||password==='')
+    alert("Please enter both E-mail Id and Password to create an Account");
+    else{
     auth.createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth);
@@ -29,6 +33,7 @@ function Login() {
         }
       })
       .catch(err => alert(err.message))
+    }
   }
 
   return (
@@ -55,10 +60,10 @@ function Login() {
           <div className="col-8 offset-2 col-md-4 offset-md-4">
             <form>
               <h5>E-Mail</h5>
-              <input type="email" value={email} className="form-control mt-2 mb-2" onChange={e => setEmail(e.target.value)} />
+              <input type="email" value={email} className="form-control mt-2 mb-2" required onChange={e => setEmail(e.target.value)} />
 
               <h5>Password</h5>
-              <input type="password" value={password} className="form-control mt-2  mb-2" onChange={e => setPassword(e.target.value)} />
+              <input type="password" value={password} className="form-control mt-2  mb-2" required onChange={e => setPassword(e.target.value)} />
 
               <button className="login__signInButton mt-2  mb-2" onClick={signIn}>Sign In</button>
             </form>

@@ -4,7 +4,7 @@
 background: #1A1A1B;
 box-shadow:  20px 20px 60px #0e0e0e,
              -20px -20px 60px #262628;
-    max-width:55vw;
+    max-width:80%;
     margin-top:30px;
     margin-bottom:20px;
     align-items: center;
@@ -22,9 +22,33 @@ box-shadow:  20px 20px 60px #0e0e0e,
     padding-left: 20px;
 }
 
-.checkoutProduct__info> button {
+.product__button {
     border: 1px solid black;
-    margin: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
     padding:
      5px;
 }
+
+@media screen and (max-width: 800px){
+    .checkoutProduct{
+        display: flex;
+        border-radius: 7px;
+    background: #1A1A1B;
+    box-shadow:  20px 20px 60px #0e0e0e,
+                 -20px -20px 60px #262628;
+        max-width:90%;
+        margin-top:30px;
+        margin-bottom:20px;
+        align-items: center;
+        padding: 20px;
+    }
+    .product__button {
+        border: 1px solid black;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        padding:
+         2px;
+    }
+}
+
