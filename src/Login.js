@@ -55,17 +55,17 @@ function Login() {
           <div className="col-8 offset-2 col-md-4 offset-md-4">
             <form>
               <h5>E-Mail</h5>
-              <input type="email" value={email} className="form-control" onChange={e => setEmail(e.target.value)} />
+              <input type="email" value={email} className="form-control mt-2 mb-2" onChange={e => setEmail(e.target.value)} />
 
               <h5>Password</h5>
-              <input type="password" value={password} className="form-control" onChange={e => setPassword(e.target.value)} />
+              <input type="password" value={password} className="form-control mt-2  mb-2" onChange={e => setPassword(e.target.value)} />
 
-              <button className="login__signInButton" onClick={signIn}>Sign In</button>
+              <button className="login__signInButton mt-2  mb-2" onClick={signIn}>Sign In</button>
             </form>
 
             <p>BY signing-in you agree to our terms and conditions.</p>
 
-            <button className="login__registerButton" onClick={register}>Create new account</button>
+            <button className="login__registerButton mt-2  mb-2" onClick={register}>Create new account</button>
           </div>
         </div>
 

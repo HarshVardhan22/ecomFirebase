@@ -4,6 +4,9 @@
   align-items: center;
   flex: 1;
 } */
+*{
+  color: whitesmoke;
+}
 .login__logo {
   margin-top: 20px;
   max-height: 150px;
