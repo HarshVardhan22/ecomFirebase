@@ -63,10 +63,14 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{marginTop:"12%"}}>
       <div className="row">
         <div className="col-6 offset-3">
           <form autoComplete="on" className="form" onSubmit={addProduct}>
+          <div className="row">
+          <h2  className="col-md-5 offset-md-3">Add Product </h2>
+          </div>
+         
             <div className="form-group">
               <label>Add Name</label>
               <input
