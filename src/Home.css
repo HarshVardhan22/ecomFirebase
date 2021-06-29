@@ -36,14 +36,15 @@
     font-size:48px;
     font-weight: bold;
     font-family: sans-serif;
-    position: relative;
-    bottom: 100px;
+    padding-top: -100px;
+    padding-left: 5%;
 }
+
 .home__text2{
     margin-top: 50px;
     font-size:36px;
     font-weight: bold;
     font-family: sans-serif;
-    position: relative;
-    bottom: 150px;
+    padding-bottom: 130px;
+    padding-left: 5%;
 }
