@@ -65,7 +65,7 @@ const AddProduct = () => {
   return (
     <div className="container-fluid addProduct">
     <div className="row">
-          <h2  className="col col-md-5 offset-md-3 text-center">Add Product </h2>
+          <h2  className="col col-md-6 offset-md-3 text-center">Add Product </h2>
           </div>
       <div className="row">
         <div className="col-6 offset-3 col-md-4 offset-md-4">

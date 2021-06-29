@@ -1,10 +1,14 @@
 .checkoutProduct{
     display: flex;
-
-    max-width:60vw;
-    margin-top:20px;
+    border-radius: 7px;
+background: #1A1A1B;
+box-shadow:  20px 20px 60px #0e0e0e,
+             -20px -20px 60px #262628;
+    max-width:55vw;
+    margin-top:30px;
     margin-bottom:20px;
     align-items: center;
+    padding: 20px;
 }
 .checkoutProductDetails{
     margin-left: 20px;

@@ -12,11 +12,13 @@
 }
 .addProduct{
     margin-top: 12%;
+    color: whitesmoke;
 }
 
 @media screen and (max-width: 600px) {
     .addProduct{
        position: absolute;
        top: 10%;
+       color: whitesmoke;
     }
 }
