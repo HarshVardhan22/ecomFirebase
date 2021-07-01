@@ -20,21 +20,7 @@ function Login() {
       .catch(err => alert(err.message))
   }
 
-  const register = (e) => {
-    e.preventDefault();
-    if(email===''||password==='')
-    alert("Please enter both E-mail Id and Password to create an Account");
-    else{
-    auth.createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        console.log(auth);
-        if (auth) {
-          history.push('/');
-        }
-      })
-      .catch(err => alert(err.message))
-    }
-  }
+  
 
   return (
     <div>
@@ -53,7 +39,7 @@ function Login() {
      
      
       <div className="row">
-        <div className="col-8 offset-2 col-md-4 offset-md-4 text-center" ><h2>Sign In</h2></div>
+        <div className="col-8 offset-2 col-md-4 offset-md-4 text-center" ><h2>Login</h2></div>
       </div>
       <div className="container login">
         <div className="row ">
@@ -68,9 +54,11 @@ function Login() {
               <button className="login__signInButton mt-2  mb-2" onClick={signIn}>Sign In</button>
             </form>
 
-            <p>BY signing-in you agree to our terms and conditions.</p>
-
-            <button className="login__registerButton mt-2  mb-2" onClick={register}>Create new account</button>
+           
+            <Link to = "/signUp">
+            <button className="login__registerButton mt-2  mb-2">Create new account</button>
+            </Link>
+           
           </div>
         </div>
 

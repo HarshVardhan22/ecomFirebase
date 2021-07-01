@@ -1,0 +1,78 @@
+/* .signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+} */
+*{
+    color: whitesmoke;
+  }
+  .signUp__logo {
+    margin-top: 20px;
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .signUp__heading{
+    margin-left: 40%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .signUp__logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  /* 
+  .signUp__container > form > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .signUp__container > form > h5 {
+    margin-bottom: 5px;
+  }
+  .signUp__container>p{
+      margin-top: 10px;
+     
+  }
+  .signUp__container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    width: 98%;
+    border-radius: 5px;
+  } */
+  
+  /* .signUp__signInButton{
+      width: 100%;
+      background-color: orangered;
+      color: whitesmoke;
+      font-size: medium;
+      font-weight: 400;
+      border-radius: 5px;
+      border: 1px solid black;
+      padding: 5px;
+      margin-top: 10px;
+  } */
+  .signUp__registerButton{
+      width: 100%;
+      background-color: darkslategrey;
+      border-radius: 5px;
+      color: whitesmoke;
+      border: 1px solid black;
+      padding: 5px;
+      font-size: medium;
+      font-weight: 400;
+      margin-top: 10px;
+  }
+  
+  
