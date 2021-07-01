@@ -1,7 +1,7 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import GradeIcon from "@material-ui/icons/Grade";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../../Redux/StateProvider";
 function CheckoutProduct({ title, price, rating, image,id }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {

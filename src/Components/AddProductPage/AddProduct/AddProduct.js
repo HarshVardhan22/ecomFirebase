@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+// @ts-ignore
 import { propTypes } from "react-currency-format";
-import { storage , db} from "./firebase";
+import { storage , db} from "../../../firebase";
 import "./AddProduct.css"
 const AddProduct = () => {
   const [productName, setProductName] = useState("");
@@ -25,7 +26,9 @@ const AddProduct = () => {
   const addProduct = (e) => {
     e.preventDefault();
     const uploadTask = storage
+      // @ts-ignore
       .ref(`product-images/${productImage.name}`)
+      // @ts-ignore
       .put(productImage);
     uploadTask.on(
       "state_changed",
@@ -40,6 +43,7 @@ const AddProduct = () => {
       () => {
         storage
           .ref("product-images")
+          // @ts-ignore
           .child(productImage.name)
           .getDownloadURL()
           .then((url) => {
@@ -54,6 +58,7 @@ const AddProduct = () => {
                 setProductName("");
                 setProductPrice(0);
                 setError("");
+                // @ts-ignore
                 document.getElementById("file").value = "";
               })
               .catch((err) => setError(err.message));
@@ -90,6 +95,7 @@ const AddProduct = () => {
                 type="number"
                 className="form-control"
                 onChange={(e) => {
+                  // @ts-ignore
                   setProductPrice(e.target.value);
                 }}
                 value={productPrice}

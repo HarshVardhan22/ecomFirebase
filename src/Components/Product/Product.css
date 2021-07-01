@@ -3,10 +3,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    max-height: 400px;
+    max-height: 100%;
     margin: 10px;
     margin-top: 30px;
-    padding: 20px;
+    padding: 25px;
     min-width: 100px;
     color: whitesmoke;
     z-index: 1;
@@ -16,6 +16,8 @@ box-shadow:  20px 20px 60px #0e0e0e,
              -20px -20px 60px #262628;
     
 }
+
+
 
 
 .product > img {
@@ -40,4 +42,5 @@ box-shadow:  20px 20px 60px #0e0e0e,
 
 .product__info{
     width: 100%;
+    padding: 10px;
 }

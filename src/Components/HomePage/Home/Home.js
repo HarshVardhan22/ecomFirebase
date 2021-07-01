@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import cover from "./assets/cover.jpg";
-import { db } from "./firebase";
+import { db } from "../../../firebase";
 import "./Home.css";
-import Product from "./Product";
-import { useStateValue } from "./StateProvider";
+import Product from "../../Product/Product";
+import { useStateValue } from "../../../Redux/StateProvider";
 import Fade from 'react-reveal/Fade';
 
 function Home() {
@@ -45,6 +44,7 @@ function Home() {
           return (
             <div className="col-lg-4 col-l-4 col-md-6 col-s-6 col-xs-12">
               <Product title={id.productName} price={id.productPrice}
+                // @ts-ignore
                 rating={Math.floor(Math.random() * 2) + 3} image={id.productImage} />
             </div>
           );

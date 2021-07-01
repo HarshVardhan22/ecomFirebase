@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {useStateValue} from './StateProvider';
+import {useStateValue} from '../../Redux/StateProvider';
 import "./Product.css";
-import product from "./assets/product.png";
+import product from "../../assets/product.png";
 import GradeIcon from "@material-ui/icons/Grade";
 function Product({title="title",price=100,rating='4',image=`${product}`}){
 
