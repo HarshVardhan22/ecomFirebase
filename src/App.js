@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Components/Header/Header";
 import Home from "./Components/HomePage/Home/Home";
 import Checkout from "./Components/CheckoutPage/Checkout/Checkout";
@@ -14,12 +14,16 @@ function App() {
   //the useEffect && contextAPI will be used to keep track of which user is logged in currently
   //so that we know on each page which user is logged in and will show personalized data like cart items
   //and the session is maintained even if the page is refreshed
+
   useEffect(() => {
     //will only run once when the app comp is loaded
+    const [url,setUrl] = useState('/login');
+
     auth.onAuthStateChanged((authUser) => {
       console.log("the user is authUser", authUser);
       
       if (authUser) {
+        setUrl('/checkout');
         //the user just logged is or was already logged in
         dispatch({
           type:'SET_USER',
@@ -34,6 +38,7 @@ function App() {
       }
     });
   }, []);
+
   return (
     <Router>
       <div className="App">

@@ -24,7 +24,7 @@ const SignUp = () => {
     }
 
     return (
-        <div>
+        <React.Fragment>
 
             <div className="signUp__logo">
                 <Link to="/">
@@ -57,12 +57,12 @@ const SignUp = () => {
 
                         <p>BY signing-in you agree to our terms and conditions.</p>
 
-                       
+
                     </div>
                 </div>
 
             </div>
-        </div>
+        </React.Fragment>
 
     )
 }

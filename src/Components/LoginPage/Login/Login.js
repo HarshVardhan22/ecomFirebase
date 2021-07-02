@@ -23,7 +23,7 @@ function Login() {
   
 
   return (
-    <div>
+    <React.Fragment>
       
         <div className="login__logo">
         <Link to="/">
@@ -63,7 +63,7 @@ function Login() {
         </div>
 
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 export default Login;

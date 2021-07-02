@@ -1,15 +1,16 @@
 // @ts-nocheck
-import React from "react";
+import React, {useState} from "react";
 import "./Header.css";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import brand from "../../assets/brand.png";
-import SearchIcon from "@material-ui/icons/Search";
+
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../Redux/StateProvider";
 import { auth } from "../../firebase";
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
-
+  
+ 
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
@@ -67,7 +68,7 @@ function Header() {
           </li>
 
           <li className="nav-item active">
-            <Link to="/checkout">
+            <Link to={url}>
               <div className="nav-link header__optionLineTwo">
                 <ShoppingCartIcon className="shoppingCart__icon" />
                 <span className="header__basketCount">
