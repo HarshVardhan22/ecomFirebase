@@ -52,6 +52,7 @@ const AddProduct = () => {
                 productName: productName,
                 productPrice: Number(productPrice),
                 productImage: url,
+                productRating: Math.floor(Math.random() * 2) + 3
               })
               .then(() => {
                 setProductImage("");

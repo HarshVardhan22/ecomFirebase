@@ -45,7 +45,7 @@ function Home() {
             <div className="col-lg-4 col-l-4 col-md-6 col-s-6 col-xs-12">
               <Product title={id.productName} price={id.productPrice}
                 // @ts-ignore
-                rating={Math.floor(Math.random() * 2) + 3} image={id.productImage} />
+                rating={id.productRating?id.productRating:4} image={id.productImage} />
             </div>
           );
         })}
