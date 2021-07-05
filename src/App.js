@@ -17,13 +17,13 @@ function App() {
 
   useEffect(() => {
     //will only run once when the app comp is loaded
-    const [url,setUrl] = useState('/login');
+   // const [url,setUrl] = useState('/login');
 
     auth.onAuthStateChanged((authUser) => {
       console.log("the user is authUser", authUser);
       
       if (authUser) {
-        setUrl('/checkout');
+      //  setUrl('/checkout');
         //the user just logged is or was already logged in
         dispatch({
           type:'SET_USER',

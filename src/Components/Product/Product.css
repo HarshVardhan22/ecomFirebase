@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: flex-end;
     max-height: 100%;
-    margin: 10px;
-    margin-top: 30px;
+    margin: 30px;
+    margin-top: 45px;
     padding: 25px;
     min-width: 100px;
     color: whitesmoke;
@@ -17,6 +17,26 @@ box-shadow:  20px 20px 60px #0e0e0e,
     
 }
 
+@media screen and (max-width: 600px) {
+    .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        max-height: 100%;
+        margin: 10px;
+        margin-top: 30px;
+        padding: 25px;
+        min-width: 100px;
+        color: whitesmoke;
+        z-index: 1;
+        border-radius: 7px;
+    background: #1A1A1B;
+    box-shadow:  20px 20px 60px #0e0e0e,
+                 -20px -20px 60px #262628;
+        
+    }
+}
 
 
 

@@ -1,19 +1,23 @@
 // @ts-nocheck
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import "./Header.css";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import brand from "../../assets/brand.png";
 
-import { Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import { useStateValue } from "../../Redux/StateProvider";
 import { auth } from "../../firebase";
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
+  const [url,setUrl] = useState('/checkout');
+  const history = useHistory();
   
  
   const handleAuthentication = () => {
     if (user) {
-      auth.signOut();
+      auth.signOut();     
+        history.push('/');
+        setUrl('/login');
     }
   };
 
@@ -45,7 +49,7 @@ function Header() {
           <li className="nav-item">
             <div className="nav_container">
               <span className="nav-link header__optionLineTwo">
-                Hello {user ? user.email : "Guest"}
+                Hello <strong>{user ? (user.email).replace(/@.*$/,"") : "Guest"}</strong>
               </span>
             </div>
           </li>
@@ -62,13 +66,13 @@ function Header() {
           </li>
 
           <li className="nav-item">
-            <Link to="/addProduct">
+            <Link to={!user ? "/login" : "/addProduct"}>
               <span className="nav-link header__optionLineTwo">Add Products</span>
             </Link>
           </li>
 
           <li className="nav-item active">
-            <Link to={url}>
+            <Link to={!user ? "/login" : "/checkout" }>
               <div className="nav-link header__optionLineTwo">
                 <ShoppingCartIcon className="shoppingCart__icon" />
                 <span className="header__basketCount">
