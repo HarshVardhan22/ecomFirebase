@@ -32,8 +32,8 @@ function Home() {
     <div className="home container-fluid">
       <div className="home__container">
         <Fade top>
-          <p className='text-white home__text'>Lorem ipsum dolor sit amet</p>
-          <p className='text-white home__text2'>Excepteur sint occaecat</p>
+          <p className='text-white home__text'>Welcome to ReactKart!</p>
+          <p className='text-white home__text2'>Making Shopping Easy</p>
 
         </Fade>
 

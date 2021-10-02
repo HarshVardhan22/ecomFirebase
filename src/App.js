@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./Redux/StateProvider";
 import SignUp from "./Components/LoginPage/SignUp/SignUp"
+import Order from "./Components/CheckoutPage/Order.js/Order";
+import OrderPlaced from "./Components/CheckoutPage/Order.js/OrderPlaced";
 function App() {
   const [{}, dispatch] = useStateValue();
   //the useEffect && contextAPI will be used to keep track of which user is logged in currently
@@ -56,6 +58,14 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/orders">
+          <Header />
+            <Order/>
+          </Route>
+          <Route path="/orderPlaced">
+          <Header />
+            <OrderPlaced/>
           </Route>
           <Route path="/">
             <Header />

@@ -3,6 +3,7 @@ import CurrencyFormat from "react-currency-format";
 import "./Subtotal.css";
 import {useStateValue} from "../../../Redux/StateProvider"
 import {getBasketTotal} from "../../../Redux/reducer";
+import {Link} from "react-router-dom";
 function Subtotal() {
   const [{basket}, dispatch] = useStateValue();
   return (
@@ -25,7 +26,11 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"₹"}
       />
-      <button className="subtotal__btn">Proceed to Checkout</button>
+      <Link to="/orders">
+      <button className="subtotal__btn" disabled={basket.length==0?true:false} style={{opacity:`${basket.length==0?0.5:1}`}}>Proceed to Checkout</button>
+
+      </Link>
+     
     </div>
   );
 }
